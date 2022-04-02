@@ -1,0 +1,91 @@
+ModuleNotFoundError
+Python 3.7.6: D:\python\BoMaiApp2\venv\Scripts\python.exe
+Mon Jan 17 11:07:31 2022
+
+A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.
+
+ D:\python\BoMaiApp2\EldLabelMG\main_eld_app.py in <module>()
+    8 
+    9 import win32api
+   10 from PySide2.QtCore import QObject, QTranslator, Qt
+   11 from PySide2.QtGui import QIcon, QPixmap
+   12 from PySide2.QtNetwork import QLocalServer, QLocalSocket
+PySide2 undefined
+QObject undefined
+QTranslator undefined
+Qt undefined
+
+ D:\python\BoMaiApp2\venv\lib\site-packages\PySide2\__init__.py in <module>()
+  103                     QtNetwork.QSslSocket.supportsSsl()
+  104             finally:
+  105                 os.environ['PATH'] = path
+  106 
+  107 _setupQtDirectories()
+_setupQtDirectories = <function _setupQtDirectories>
+
+ D:\python\BoMaiApp2\venv\lib\site-packages\PySide2\__init__.py in _setupQtDirectories()
+   56 
+   57     try:
+   58         import shiboken2
+   59     except Exception:
+   60         paths = ', '.join(sys.path)
+shiboken2 undefined
+
+ D:\python\BoMaiApp2\shiboken2\__init__.py in <module>()
+   26 
+   27 # from .shiboken2 import *
+   28 from shiboken2_.shiboken2 import *
+   29 
+   30 # Trigger signature initialization via __builtins__.
+shiboken2_ undefined
+ModuleNotFoundError: No module named 'shiboken2_'
+    __cause__ = None
+    __class__ = <class 'ModuleNotFoundError'>
+    __context__ = None
+    __delattr__ = <method-wrapper '__delattr__' of ModuleNotFoundError object>
+    __dict__ = {}
+    __dir__ = <built-in method __dir__ of ModuleNotFoundError object>
+    __doc__ = 'Module not found.'
+    __eq__ = <method-wrapper '__eq__' of ModuleNotFoundError object>
+    __format__ = <built-in method __format__ of ModuleNotFoundError object>
+    __ge__ = <method-wrapper '__ge__' of ModuleNotFoundError object>
+    __getattribute__ = <method-wrapper '__getattribute__' of ModuleNotFoundError object>
+    __gt__ = <method-wrapper '__gt__' of ModuleNotFoundError object>
+    __hash__ = <method-wrapper '__hash__' of ModuleNotFoundError object>
+    __init__ = <method-wrapper '__init__' of ModuleNotFoundError object>
+    __init_subclass__ = <built-in method __init_subclass__ of type object>
+    __le__ = <method-wrapper '__le__' of ModuleNotFoundError object>
+    __lt__ = <method-wrapper '__lt__' of ModuleNotFoundError object>
+    __ne__ = <method-wrapper '__ne__' of ModuleNotFoundError object>
+    __new__ = <built-in method __new__ of type object>
+    __reduce__ = <built-in method __reduce__ of ModuleNotFoundError object>
+    __reduce_ex__ = <built-in method __reduce_ex__ of ModuleNotFoundError object>
+    __repr__ = <method-wrapper '__repr__' of ModuleNotFoundError object>
+    __setattr__ = <method-wrapper '__setattr__' of ModuleNotFoundError object>
+    __setstate__ = <built-in method __setstate__ of ModuleNotFoundError object>
+    __sizeof__ = <built-in method __sizeof__ of ModuleNotFoundError object>
+    __str__ = <method-wrapper '__str__' of ModuleNotFoundError object>
+    __subclasshook__ = <built-in method __subclasshook__ of type object>
+    __suppress_context__ = False
+    __traceback__ = <traceback object>
+    args = ("No module named 'shiboken2_'",)
+    msg = "No module named 'shiboken2_'"
+    name = 'shiboken2_'
+    path = None
+    with_traceback = <built-in method with_traceback of ModuleNotFoundError object>
+
+The above is a description of an error in a Python program.  Here is
+the original traceback:
+
+Traceback (most recent call last):
+  File "D:/python/BoMaiApp2/EldLabelMG/main_eld_app.py", line 10, in <module>
+    from PySide2.QtCore import QObject, QTranslator, Qt
+  File "D:\python\BoMaiApp2\venv\lib\site-packages\PySide2\__init__.py", line 107, in <module>
+    _setupQtDirectories()
+  File "D:\python\BoMaiApp2\venv\lib\site-packages\PySide2\__init__.py", line 58, in _setupQtDirectories
+    import shiboken2
+  File "D:\python\BoMaiApp2\shiboken2\__init__.py", line 28, in <module>
+    from shiboken2_.shiboken2 import *
+ModuleNotFoundError: No module named 'shiboken2_'
+

@@ -1,0 +1,35 @@
+02/28/2022 09:03:15 - ERROR    : ConsoleCtrlHandler function failed
+02/28/2022 09:03:15 - ERROR    : Traceback (most recent call last):
+
+02/28/2022 09:03:15 - ERROR    :   File "win32serviceutil.py", line 618, in _DebugCtrlHandler
+
+02/28/2022 09:03:15 - ERROR    :   File "BtServiceX64\BtService_x64.py", line 53, in SvcStop
+
+02/28/2022 09:03:15 - ERROR    :   File "BtSdkServer\btServer.py", line 226, in server_close
+
+02/28/2022 09:03:15 - ERROR    :   File "BtSdkServer\btServer.py", line 56, in close
+
+02/28/2022 09:03:15 - ERROR    : AttributeError
+02/28/2022 09:03:15 - ERROR    : : 
+02/28/2022 09:03:15 - ERROR    : 'ellipsis' object has no attribute 'close'
+02/28/2022 09:03:15 - ERROR    : Traceback (most recent call last):
+
+02/28/2022 09:03:15 - ERROR    :   File "BtServiceX64\BtService_x64.py", line 72, in <module>
+
+02/28/2022 09:03:15 - ERROR    :   File "win32serviceutil.py", line 851, in HandleCommandLine
+
+02/28/2022 09:03:15 - ERROR    :   File "win32serviceutil.py", line 640, in DebugService
+
+02/28/2022 09:03:15 - ERROR    :   File "win32serviceutil.py", line 1106, in SvcRun
+
+02/28/2022 09:03:15 - ERROR    :   File "BtServiceX64\BtService_x64.py", line 49, in SvcDoRun
+
+02/28/2022 09:03:15 - ERROR    :   File "BtSdkServer\btServer.py", line 221, in serve_forever
+
+02/28/2022 09:03:15 - ERROR    :   File "socketserver.py", line 232, in serve_forever
+
+02/28/2022 09:03:15 - ERROR    :   File "selectors.py", line 323, in select
+
+02/28/2022 09:03:15 - ERROR    :   File "selectors.py", line 314, in _select
+
+02/28/2022 09:03:15 - ERROR    : KeyboardInterrupt

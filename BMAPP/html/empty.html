@@ -1,0 +1,87 @@
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            @import url("./static/index.css");
+        </style>
+        <script src="./static/vue.js"></script>
+        <script src="./static/index.js"></script>
+        <script src="./static/qwebchannel.js"></script>
+    </head>
+    
+    <body>
+    <div id="app">
+        <template>
+            <img src="static/png/conerr.png" style="transform:translate(-50%,0);margin-left: 50%">
+            <el-empty description="无法连接到服务器，请检测网络或修改本地服务器配置后重启软件">
+<!--                <el-empty description="无法连接到服务器，请检测网络或修改本地服务器配置后重启软件" image="static/png/conerr.png">-->
+                <el-button type="primary" @click="reload">退出程序</el-button>
+                <el-button type="primary" @click="setIni">修改配置</el-button>
+            </el-empty>
+        </template>
+    </div>
+
+    <script>
+        new Vue({
+            data() {
+                return {
+                    formLabelWidth: 120,
+                    diaSet: false,
+                    loc: {
+                        host: '127.0.0.1',
+                        port: '8000'
+                    }
+                }
+            },
+            methods: {
+                reload() {
+                    obj.reload()
+                },
+                setIni() {
+                   {
+                    this.$prompt('Host配置', '修改连接配置', {
+                          confirmButtonText: '确定',
+                          cancelButtonText: '取消',
+                          inputValue: this.loc.host,
+                        }).then(({ value }) => {
+                            this.loc.host = value
+                            this.$prompt('Port配置', '修改连接配置', {
+                              confirmButtonText: '确定',
+                              cancelButtonText: '取消',
+                                inputValue: this.loc.port,
+                            }).then(({ value }) => {
+                                this.loc.port = value
+                                const vue = this
+                                obj.setIniCfg(this.loc.host, this.loc.port, function (res) {
+                                    if (res){
+                                        vue.$message.success('修改连接配置成功， 请重启程序验证连接!');
+                                    }else {
+                                        vue.$message.error('未知原因，修改失败!');
+                                    }
+                                })
+                            }).catch(() => {
+                              this.$message({
+                                type: 'info',
+                                message: '取消操作'
+                              });
+                            });
+                        }).catch(() => {
+                          this.$message({
+                            type: 'info',
+                            message: '取消操作'
+                          });
+                        });
+                    }
+                }
+            }
+        }).$mount('#app')
+        document.addEventListener("DOMContentLoaded", function () {
+            // 这里面的channel就是PyQt5传递过来的channel对象，其中包含了可供调用的obj对象（一个Factorial类对象）
+            new QWebChannel(qt.webChannelTransport, function (channel) {
+                // 从channel中获取到我们注册到channel中的Factorial类对象
+                window.obj = channel.objects.obj;
+            });
+        });
+    </script>
+
+</body></html>

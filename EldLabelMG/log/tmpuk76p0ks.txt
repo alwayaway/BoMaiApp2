@@ -1,0 +1,71 @@
+UnboundLocalError
+Python 3.7.6: D:\python\BoMaiApp2\venv\Scripts\python.exe
+Mon Jan 17 10:55:08 2022
+
+A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.
+
+ D:\python\BoMaiApp2\EldLabelMG\(builtin) in bootstrap()
+
+UnboundLocalError: local variable 'loader' referenced before assignment
+    __cause__ = None
+    __class__ = <class 'UnboundLocalError'>
+    __context__ = SystemExit(-1)
+    __delattr__ = <method-wrapper '__delattr__' of UnboundLocalError object>
+    __dict__ = {}
+    __dir__ = <built-in method __dir__ of UnboundLocalError object>
+    __doc__ = 'Local name referenced but not bound to a value.'
+    __eq__ = <method-wrapper '__eq__' of UnboundLocalError object>
+    __format__ = <built-in method __format__ of UnboundLocalError object>
+    __ge__ = <method-wrapper '__ge__' of UnboundLocalError object>
+    __getattribute__ = <method-wrapper '__getattribute__' of UnboundLocalError object>
+    __gt__ = <method-wrapper '__gt__' of UnboundLocalError object>
+    __hash__ = <method-wrapper '__hash__' of UnboundLocalError object>
+    __init__ = <method-wrapper '__init__' of UnboundLocalError object>
+    __init_subclass__ = <built-in method __init_subclass__ of type object>
+    __le__ = <method-wrapper '__le__' of UnboundLocalError object>
+    __lt__ = <method-wrapper '__lt__' of UnboundLocalError object>
+    __ne__ = <method-wrapper '__ne__' of UnboundLocalError object>
+    __new__ = <built-in method __new__ of type object>
+    __reduce__ = <built-in method __reduce__ of UnboundLocalError object>
+    __reduce_ex__ = <built-in method __reduce_ex__ of UnboundLocalError object>
+    __repr__ = <method-wrapper '__repr__' of UnboundLocalError object>
+    __setattr__ = <method-wrapper '__setattr__' of UnboundLocalError object>
+    __setstate__ = <built-in method __setstate__ of UnboundLocalError object>
+    __sizeof__ = <built-in method __sizeof__ of UnboundLocalError object>
+    __str__ = <method-wrapper '__str__' of UnboundLocalError object>
+    __subclasshook__ = <built-in method __subclasshook__ of type object>
+    __suppress_context__ = False
+    __traceback__ = <traceback object>
+    args = ("local variable 'loader' referenced before assignment",)
+    with_traceback = <built-in method with_traceback of UnboundLocalError object>
+
+The above is a description of an error in a Python program.  Here is
+the original traceback:
+
+Traceback (most recent call last):
+  File "(builtin)", line 93, in ensure_shibokensupport
+  File "(builtin)", line 133, in bootstrap
+  File "D:\python\BoMaiApp2\venv\lib\site-packages\shiboken2\files.dir\shibokensupport\signature\loader.py", line 222, in <module>
+    move_into_pyside_package()
+  File "D:\python\BoMaiApp2\venv\lib\site-packages\shiboken2\files.dir\shibokensupport\signature\loader.py", line 196, in move_into_pyside_package
+    import PySide2.support
+  File "D:\python\BoMaiApp2\venv\lib\site-packages\PySide2\support\__init__.py", line 40, in <module>
+    from shiboken2 import VoidPtr
+ImportError: cannot import name 'VoidPtr' from 'shiboken2' (D:\python\BoMaiApp2\venv\lib\site-packages\shiboken2\__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "(builtin)", line 133, in bootstrap
+  File "C:\Users\away\AppData\Local\Programs\Python\Python37-32\lib\contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "(builtin)", line 102, in ensure_shibokensupport
+SystemExit: -1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "(builtin)", line 147, in bootstrap
+UnboundLocalError: local variable 'loader' referenced before assignment
+

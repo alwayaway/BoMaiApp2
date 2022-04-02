@@ -1,0 +1,88 @@
+ModuleNotFoundError
+Python 3.7.6: D:\python\BoMaiApp\venv2\Scripts\python.exe
+Tue Nov 30 08:25:35 2021
+
+A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.
+
+ D:\python\BoMaiApp\BMAPP\main.py in <module>()
+    1 try:
+    2     from BMAPP.run import *
+    3 except Exception as run_error:
+    4     raise run_error
+run_error undefined
+
+ D:\python\BoMaiApp\BMAPP\main.py in <module>()
+    1 try:
+    2     from BMAPP.run import *
+    3 except Exception as run_error:
+    4     raise run_error
+BMAPP undefined
+
+ D:\python\BoMaiApp\BMAPP\run.py in <module>()
+   18 
+   19 from BMAPP.js import JsMethods
+   20 from BMAPP.Qtool import tool
+   21 from toolbase import *
+   22 
+BMAPP undefined
+tool undefined
+
+ D:\python\BoMaiApp\BMAPP\Qtool\tool.py in <module>()
+    5 import contextlib
+    6 from threading import Thread
+    7 import pylightxl as xl
+    8 import xlsxwriter
+    9 
+pylightxl undefined
+xl undefined
+ModuleNotFoundError: No module named 'pylightxl'
+    __cause__ = None
+    __class__ = <class 'ModuleNotFoundError'>
+    __context__ = None
+    __delattr__ = <method-wrapper '__delattr__' of ModuleNotFoundError object>
+    __dict__ = {}
+    __dir__ = <built-in method __dir__ of ModuleNotFoundError object>
+    __doc__ = 'Module not found.'
+    __eq__ = <method-wrapper '__eq__' of ModuleNotFoundError object>
+    __format__ = <built-in method __format__ of ModuleNotFoundError object>
+    __ge__ = <method-wrapper '__ge__' of ModuleNotFoundError object>
+    __getattribute__ = <method-wrapper '__getattribute__' of ModuleNotFoundError object>
+    __gt__ = <method-wrapper '__gt__' of ModuleNotFoundError object>
+    __hash__ = <method-wrapper '__hash__' of ModuleNotFoundError object>
+    __init__ = <method-wrapper '__init__' of ModuleNotFoundError object>
+    __init_subclass__ = <built-in method __init_subclass__ of type object>
+    __le__ = <method-wrapper '__le__' of ModuleNotFoundError object>
+    __lt__ = <method-wrapper '__lt__' of ModuleNotFoundError object>
+    __ne__ = <method-wrapper '__ne__' of ModuleNotFoundError object>
+    __new__ = <built-in method __new__ of type object>
+    __reduce__ = <built-in method __reduce__ of ModuleNotFoundError object>
+    __reduce_ex__ = <built-in method __reduce_ex__ of ModuleNotFoundError object>
+    __repr__ = <method-wrapper '__repr__' of ModuleNotFoundError object>
+    __setattr__ = <method-wrapper '__setattr__' of ModuleNotFoundError object>
+    __setstate__ = <built-in method __setstate__ of ModuleNotFoundError object>
+    __sizeof__ = <built-in method __sizeof__ of ModuleNotFoundError object>
+    __str__ = <method-wrapper '__str__' of ModuleNotFoundError object>
+    __subclasshook__ = <built-in method __subclasshook__ of type object>
+    __suppress_context__ = False
+    __traceback__ = <traceback object>
+    args = ("No module named 'pylightxl'",)
+    msg = "No module named 'pylightxl'"
+    name = 'pylightxl'
+    path = None
+    with_traceback = <built-in method with_traceback of ModuleNotFoundError object>
+
+The above is a description of an error in a Python program.  Here is
+the original traceback:
+
+Traceback (most recent call last):
+  File "D:/python/BoMaiApp/BMAPP/main.py", line 4, in <module>
+    raise run_error
+  File "D:/python/BoMaiApp/BMAPP/main.py", line 2, in <module>
+    from BMAPP.run import *
+  File "D:\python\BoMaiApp\BMAPP\run.py", line 20, in <module>
+    from BMAPP.Qtool import tool
+  File "D:\python\BoMaiApp\BMAPP\Qtool\tool.py", line 7, in <module>
+    import pylightxl as xl
+ModuleNotFoundError: No module named 'pylightxl'
+

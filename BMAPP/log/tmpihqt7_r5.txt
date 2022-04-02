@@ -1,0 +1,69 @@
+TypeError
+Python 3.8.5: D:\python\BoMaiApp\venv\Scripts\python.exe
+Sat Nov 27 14:25:41 2021
+
+A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.
+
+ D:\python\BoMaiApp\BMAPP\main.py in <module>
+   41 
+   42 
+   43 class Factorial(QObject):
+   44     def __init__(self, *args, **kwargs):
+   45         super(Factorial, self).__init__(*args, **kwargs)
+Factorial undefined
+QObject = <class 'PySide6.QtCore.QObject'>
+
+ D:\python\BoMaiApp\BMAPP\main.py in Factorial()
+  156             mainWin.runJavaScript(mainWin.js.error(f"{_edit_err}"))
+  157 
+  158     @Slot(json, result=str)
+  159     def prtBtw(self, data):
+  160         print(data)
+global Slot = <class 'PySide6.QtCore.Slot'>
+global json = <module 'json' from 'C:\\Users\\away\\AppData\\L...grams\\Python\\Python38\\lib\\json\\__init__.py'>
+result = <staticmethod object>
+builtinstr = <class 'str'>
+TypeError: Unknown signal argument type: module
+    __cause__ = None
+    __class__ = <class 'TypeError'>
+    __context__ = None
+    __delattr__ = <method-wrapper '__delattr__' of TypeError object>
+    __dict__ = {}
+    __dir__ = <built-in method __dir__ of TypeError object>
+    __doc__ = 'Inappropriate argument type.'
+    __eq__ = <method-wrapper '__eq__' of TypeError object>
+    __format__ = <built-in method __format__ of TypeError object>
+    __ge__ = <method-wrapper '__ge__' of TypeError object>
+    __getattribute__ = <method-wrapper '__getattribute__' of TypeError object>
+    __gt__ = <method-wrapper '__gt__' of TypeError object>
+    __hash__ = <method-wrapper '__hash__' of TypeError object>
+    __init__ = <method-wrapper '__init__' of TypeError object>
+    __init_subclass__ = <built-in method __init_subclass__ of type object>
+    __le__ = <method-wrapper '__le__' of TypeError object>
+    __lt__ = <method-wrapper '__lt__' of TypeError object>
+    __ne__ = <method-wrapper '__ne__' of TypeError object>
+    __new__ = <built-in method __new__ of type object>
+    __reduce__ = <built-in method __reduce__ of TypeError object>
+    __reduce_ex__ = <built-in method __reduce_ex__ of TypeError object>
+    __repr__ = <method-wrapper '__repr__' of TypeError object>
+    __setattr__ = <method-wrapper '__setattr__' of TypeError object>
+    __setstate__ = <built-in method __setstate__ of TypeError object>
+    __sizeof__ = <built-in method __sizeof__ of TypeError object>
+    __str__ = <method-wrapper '__str__' of TypeError object>
+    __subclasshook__ = <built-in method __subclasshook__ of type object>
+    __suppress_context__ = False
+    __traceback__ = <traceback object>
+    args = ('Unknown signal argument type: module',)
+    with_traceback = <built-in method with_traceback of TypeError object>
+
+The above is a description of an error in a Python program.  Here is
+the original traceback:
+
+Traceback (most recent call last):
+  File "D:/python/BoMaiApp/BMAPP/main.py", line 43, in <module>
+    class Factorial(QObject):
+  File "D:/python/BoMaiApp/BMAPP/main.py", line 158, in Factorial
+    @Slot(json, result=str)
+TypeError: Unknown signal argument type: module
+

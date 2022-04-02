@@ -1,0 +1,4 @@
+01/20/2022 15:16:31 - ERROR    : 更新服务器装箱单F01SDH2112000332失败！非查询语句执行: []
+01/20/2022 15:16:31 - ERROR    : 更新服务器装箱单失败！('23000', "[23000] [Microsoft][ODBC SQL Server Driver][SQL Server]Cannot insert explicit value for identity column in table 'XPALDTL' when IDENTITY_INSERT is set to OFF. (544) (SQLExecDirectW)")
+01/20/2022 15:16:37 - ERROR    : 新增服务器装箱单失败！非查询语句执行: []
+01/20/2022 15:16:37 - ERROR    : 新增服务器装箱单失败！('23000', "[23000] [Microsoft][ODBC SQL Server Driver][SQL Server]Cannot insert explicit value for identity column in table 'XPALDTLD' when IDENTITY_INSERT is set to OFF. (544) (SQLExecDirectW)")

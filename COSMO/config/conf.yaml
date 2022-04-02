@@ -1,0 +1,29 @@
+Area:
+  AA: '11'
+  AB: '12'
+  BA: '13'
+  BB: '14'
+  CA: '15'
+  CB: '31'
+  DA: '32'
+  DB: '33'
+  EA: '34'
+  EB: '35'
+  FA: '21'
+  FB: '22'
+  GA: '23'
+  GB: '24'
+  HA: '25'
+  HB: '41'
+  IA: '42'
+  IB: '43'
+  JA: '44'
+  JB: '45'
+HOST: 192.168.1.125
+MS_BOX_IN: 100
+MS_BOX_OUT: 300
+NG: NoRead
+PORT: 8080
+RE_AREA_XY: ([0-9])\+([0-9])\+(.*?)$
+RE_RULE_NAME: 默认配置
+TIMEOUT: 100
